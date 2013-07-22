@@ -2,5 +2,5 @@
     %a.logoText{ href: root_path}
       =image_tag('icon.png')
       iArchive
-      =form_tag query_experiments_path, method: 'post', class: 'navbar-search' do
-        =text_field_tag :query, nil, class: 'search-query  span3', placeholder: "Search"
+    =form_tag query_experiments_path, method: 'post', class: 'navbar-search' do
+      =text_field_tag :query, nil, class: 'search-query  span3', placeholder: "Search"

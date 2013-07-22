@@ -5,7 +5,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
 %body
-    #container.container
+    .container
         .header.row
             =render partial: "shared/header"
         .content.row
@@ -13,9 +13,4 @@
         .footer.row
             =render partial: 'shared/footer'
     .js
-
-
-<%= yield %>
-
-</body>
-</html>
+        = yield :js

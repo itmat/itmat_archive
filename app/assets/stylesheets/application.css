@@ -11,3 +11,30 @@
  *= require_self
  *= require_tree .
  */
+/*
+ *= require twitter/bootstrap
+ *= require twitter/bootstrap/_responsive
+ */
+
+.logoText {
+  float: left;
+  padding-right: 8px;
+  vertical-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.logoText:hover {
+  color: $darkBlue;
+  text-decoration: none;
+}
+
+.header {
+    border-bottom: 2px solid #237;
+    margin-bottom: 10px;
+}
+.footer {
+    border-top: 2px solid #237;
+    margin-top: 10px;
+}

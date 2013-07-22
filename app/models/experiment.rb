@@ -1,3 +1,18 @@
+require "json"
 class Experiment < ActiveRecord::Base
-  attr_accessible :location, :notes
+    serialize :owners, Array
+
+    attr_accessible :qinteract_project_id, :project_name, :owners,
+        :achive_folder_name, :record_string
+
+    def record
+        @record ||= JSON.parse(record_string)
+    end
+    def record=(json_record)
+        self.record_string = json_record.to_s()
+    end
+
+    include PgSearch
+    pg_search_scope :search, against: [:project_name, :record_string]
+
 end

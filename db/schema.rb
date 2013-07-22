@@ -14,8 +14,11 @@
 ActiveRecord::Schema.define(:version => 20130722162453) do
 
   create_table "experiments", :force => true do |t|
-    t.string "location", :null => false
-    t.text   "notes",    :null => false
+    t.integer "qinteract_project_id"
+    t.string  "project_name"
+    t.string  "owners"
+    t.string  "archive_folder_name"
+    t.text    "record_string"
   end
 
 end

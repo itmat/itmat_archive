@@ -3,7 +3,7 @@ class Experiment < ActiveRecord::Base
     serialize :owners, Array
 
     attr_accessible :qinteract_project_id, :project_name, :owners,
-        :achive_folder_name, :record_string
+        :archive_disk, :achive_folder_name, :record_string
 
     def record
         @record ||= JSON.parse(record_string)
@@ -13,6 +13,6 @@ class Experiment < ActiveRecord::Base
     end
 
     include PgSearch
-    pg_search_scope :search, against: [:project_name, :record_string]
+    pg_search_scope :search, against: [:project_name, :owners, :record_string]
 
 end

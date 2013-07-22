@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20130722162453) do
     t.integer "qinteract_project_id"
     t.string  "project_name"
     t.string  "owners"
+    t.string  "archive_disk"
     t.string  "archive_folder_name"
     t.text    "record_string"
   end

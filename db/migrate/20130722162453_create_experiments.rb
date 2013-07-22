@@ -4,6 +4,7 @@ class CreateExperiments < ActiveRecord::Migration
       t.integer :qinteract_project_id
       t.string :project_name
       t.string :owners
+      t.string :archive_disk
       t.string :archive_folder_name
       t.text :record_string
     end

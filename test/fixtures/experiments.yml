@@ -1,9 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  notes: MyText
-  location: MyString
-
-two:
-  notes: MyText
-  location: MyString
+    qinteract_project_id: 1
+    project_name: 'test  project'
+    owners: ['user1','user2']
+    archive_folder_name:

@@ -1,5 +1,7 @@
 %h2==Project: #{@experiment.project_name}
 
+
+
 %table.table.table-bordered
   %tbody
     %tr
@@ -18,6 +20,7 @@
       %th Archive Folder
       %td= @experiment.archive_folder_name
 
+=link_to "Show Full Record", record_experiment_path(), method: 'get', class: 'btn btn-large'
 %h4 Analyses
 %table.table.table-bordered.table-striped
   %thead

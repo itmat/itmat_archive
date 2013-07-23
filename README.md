@@ -1,29 +1,29 @@
-== ITMAT Proteomics Data Archive
+## ITMAT Proteomics Data Archive
 
 A simple Rails application that services to store the metadata from older proteomics experiments. Data are redundantly stored on bare hard drives.
 
-== Dependencies
+### Dependencies
 
 The application depends on PostgreSQL > 8.3
 
 And Rails of course
 
-== INSTALL
+### INSTALL
 
 The usual way you install Rails and Rails applications.
 
-== Full Text Search
+### Full Text Search
 
 Full text search is accomplished via the <tt>pg_search</tt> gem. More documentation about <tt>pg_search</tt> can be found at http://https://github.com/Casecommons/pg_search
 
 See the <tt>Experiment</tt> model for what columns are searched.
 
-== Underlying Annotation Data
+### Underlying Annotation Data
 
 The underlying records are all on the backup disks themselves. For each project directory there is a <tt>README.json</tt> file that contains all of the metadata. For your convenience, the data are also in the AWS S3 bucket <tt>s3://itmat-backups/itmat_proteomics_archive/json</tt>
 
 
-== When This Site Fails You
+### When This Site Fails You
 
 There is another set of files in a 2-disk RAID0 array (3440_ARCHIVE_007). It contains:
 

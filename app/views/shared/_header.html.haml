@@ -1,6 +1,8 @@
-.span12
-    %a.logoText{ href: root_path}
-      =image_tag('icon.png')
-      iArchive
-    =form_tag query_experiments_path, method: 'post', class: 'navbar-search' do
-      =text_field_tag :query, nil, class: 'search-query  span3', placeholder: "Search"
+.span8
+  %a.logoText{ href: root_path}
+    =image_tag('icon.png')
+    iArchive
+.span4.pull-right
+  =form_tag experiments_path, method: 'get', class: 'navbar-search' do
+    =text_field_tag :query, nil, class: 'search-query  span3', placeholder: "Search"
+    =submit_tag "Go"

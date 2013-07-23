@@ -11,3 +11,9 @@ And Rails of course
 == INSTALL
 
 The usual way you install Rails and Rails applications.
+
+== Full Text Search
+
+Full text search is accomplished via the <tt>pg_search</tt> gem. More documentation about <tt>pg_search</tt> can be found at http://https://github.com/Casecommons/pg_search
+
+See the <tt>Experiment</tt> model for what columns are searched.

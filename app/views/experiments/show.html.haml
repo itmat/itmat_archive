@@ -1,0 +1,45 @@
+%h2==Project: #{@experiment.project_name}
+
+%table.table.table-bordered
+  %tbody
+    %tr
+      %th qInteract Project ID
+      %td= @experiment.qinteract_project_id
+    %tr
+      %th Project Name
+      %td= @experiment.project_name
+    %tr 
+      %th Owners
+      %tr=@experiment.owners.join(", ")
+    %tr
+      %th Archive Disk
+      %td= @experiment.archive_disk
+    %tr
+      %th Archive Folder
+      %td= @experiment.archive_folder_name
+
+%h4 Analyses
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Name
+        %th Owners
+        %th Search Type
+    %tbody
+      -for a in @experiment.record.analyses
+        %tr
+          %td=a["analysis_name"]
+          %td=a["owner"].join(", ")
+          %td=a["search"]["algorithm"]
+
+%h4 Files
+  %table.table.table-bordered.table-striped
+    %thead
+      %tr
+        %th Path
+        %th MD5 Sum
+    %tbody
+      -for f in @experiment.record.file_list
+        %tr
+          %td=f["path"]
+          %td=f["md5"]

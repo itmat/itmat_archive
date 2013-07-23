@@ -1,4 +1,4 @@
 ItmatArchive::Application.routes.draw do
-    match "/:id", to: 'experiments#show'
-    root :to => 'experiments#index'
+    resources :experiments, only: [:index,:show]
+    root to: redirect("/experiments")
 end

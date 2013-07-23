@@ -1,7 +1,10 @@
 .span8
-  %a.logoText{ href: root_path}
-    =image_tag('icon.png')
-    ITMAT Proteomics Archive
+  .logoText
+    %a{ href: root_path}
+      =image_tag('icon.png')
+      ITMAT Proteomics Archive
+    |
+    = link_to "About/Help", url_for("/about.html")
 .span4.pull-right
   =form_tag experiments_path, method: 'get', class: 'navbar-search' do
     =text_field_tag :query, nil, class: 'search-query  span3', placeholder: "Search", value: params[:query] ? params[:query]: nil

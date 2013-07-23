@@ -1,0 +1,20 @@
+%h2 Experiments
+
+%table.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th qInteract Project ID
+      %th Project Name
+      %th Owners
+      %th Archive Disk
+      %th Archive Folder
+  %tbody
+    - for experiment in @experiments
+      %tr
+        %td=link_to(experiment.qinteract_project_id, experiment_path(experiment))
+        %td=link_to(experiment.project_name, experiment_path(experiment))
+        %td=experiment.owners.join(", ")
+        %td=experiment.archive_disk
+        %td=experiment.archive_folder_name
+
+=will_paginate(@experiments)

@@ -1,5 +1,6 @@
 %h2 Experiments
-
+- if params[:query]
+  %h4==Query = "#{params[:query]}" (#{link_to "clear search", root_path})
 %table.table.table-bordered.table-striped
   %thead
     %tr

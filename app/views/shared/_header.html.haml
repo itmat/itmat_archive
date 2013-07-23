@@ -4,5 +4,5 @@
     ITMAT Proteomics Archive
 .span4.pull-right
   =form_tag experiments_path, method: 'get', class: 'navbar-search' do
-    =text_field_tag :query, nil, class: 'search-query  span3', placeholder: "Search"
+    =text_field_tag :query, nil, class: 'search-query  span3', placeholder: "Search", value: params[:query] ? params[:query]: nil
     =submit_tag "Go"

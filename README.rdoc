@@ -1,4 +1,4 @@
-== ITMAT Data Archive App
+== ITMAT Proteomics Data Archive
 
 A simple Rails application that services to store the metadata from older proteomics experiments. Data are redundantly stored on bare hard drives.
 

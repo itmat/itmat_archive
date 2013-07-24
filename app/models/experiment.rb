@@ -13,6 +13,11 @@ class Experiment < ActiveRecord::Base
     end
 
     include PgSearch
-    pg_search_scope :search, against: [:project_name, :owners, :record_string]
-
+    pg_search_scope :search, against: [:project_name, :owners, :record_string],
+        using: {
+            :tsearch => {
+                prefix: true,
+                any_word: true
+            }
+        }
 end

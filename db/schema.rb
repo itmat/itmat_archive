@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130722162453) do
+ActiveRecord::Schema.define(:version => 20130724164510) do
 
   create_table "experiments", :force => true do |t|
-    t.integer "qinteract_project_id"
-    t.string  "project_name"
-    t.string  "owners"
-    t.string  "archive_disk"
-    t.string  "archive_folder_name"
-    t.text    "record_string"
+    t.integer  "qinteract_project_id"
+    t.string   "project_name"
+    t.string   "owners"
+    t.string   "archive_disk"
+    t.string   "archive_folder_name"
+    t.text     "record_string"
+    t.tsvector "tsv_record"
   end
 
 end

@@ -15,9 +15,10 @@ class Experiment < ActiveRecord::Base
     include PgSearch
     pg_search_scope :search, against: [:project_name, :owners, :record_string],
         using: {
-            :tsearch => {
+            tsearch: {
                 prefix: true,
-                any_word: true
+                any_word: true,
+                tsvector_column: 'tsv_record'
             }
         }
 end

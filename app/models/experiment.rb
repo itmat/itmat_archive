@@ -16,6 +16,7 @@ class Experiment < ActiveRecord::Base
     pg_search_scope :search, against: [:project_name, :owners, :record_string],
         using: {
             tsearch: {
+                dictionary: 'english',
                 prefix: true,
                 any_word: true,
                 tsvector_column: 'tsv_record'

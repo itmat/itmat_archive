@@ -26,7 +26,7 @@
 }
 
 .logoText:hover {
-  color: $darkBlue;
+  color: #0000FF;
   text-decoration: none;
 }
 
